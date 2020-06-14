@@ -3,15 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android:dev": "react-native run-android --variant=devDebug --appIdSuffix=dev",
+    "android:stg": "react-native run-android --variant=stgDebug --appIdSuffix=stg",
+    "android": "react-native run-android --variant=prdDebug",
+    "ios:dev": "react-native run-ios --configuration Development --scheme rn_multi_env.dev",
+    "ios:stg": "react-native run-ios --configuration Staging --scheme rn_multi_env.stg",
+    "ios": "react-native run-ios --configuration Production --scheme rn_multi_env",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-config": "^1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

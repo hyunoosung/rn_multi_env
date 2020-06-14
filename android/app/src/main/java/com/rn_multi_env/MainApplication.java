@@ -1,5 +1,6 @@
 package com.rn_multi_env;
 
+import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
